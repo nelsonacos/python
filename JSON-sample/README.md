@@ -139,7 +139,7 @@ keep(data)
 
 # jsondata = json.dumps(finallist)
 
-with open('top10.json', 'w') as outfile:
+with open('data1sk.json', 'w') as outfile:
 json.dump(finallist, outfile)
 ```
 
@@ -158,8 +158,8 @@ response = requests.get("https://api.coinmarketcap.com/v2/ticker/")
 data = json.loads(response.text)
 
 top_10 = [i for i in data['data'].values() if i['rank'] <= 10]
-with open('top10.json', 'w') as outfile:
-json.dump(top_10, outfile, indent=4, separators=(',', ': '))
+with open('top10.json', 'w') as fp:
+json.dump(top_10, fp, indent=4, separators=(',', ': '))
 ```
 
 # Resumen
