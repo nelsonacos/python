@@ -152,7 +152,7 @@ Si usted quiere aprender mas sobre las lista de comprensiones y diccionarios com
 
 De esta forma lo hariamos usando estos conceptos:
 
-```python
+````python
 import requests
 response = requests.get("https://api.coinmarketcap.com/v2/ticker/")
 data = json.loads(response.text)
@@ -172,3 +172,4 @@ Hemos cubierto una gran cantidad de detalles de una manera sencilla, tambien le 
 - Si desea Decodificar JSON proveniente de un fichero en disco basta con usar el metodo load()
 - Si Desea Codificar un JSON para seguir manipulando los datos en memoria use dumps()
 - Si desea Codificar JSON y escribirlo en disco use dump()
+````
