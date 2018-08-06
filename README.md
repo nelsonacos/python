@@ -1,4 +1,4 @@
-# ¿ Porque python ?
+# ¿Porque python?
 
 El primer lenguaje que conocí fue **JavaScript**, otro excelente lenguaje al menos desde mi punto de vista que llegue a la programación desde tierras lejanas como el Diseño web que es otro cuento totalmente distinto es un mundo de colores, formas y experiencia de usuario pero cuando quieres dotar a tus paginas web de funcionalidades interesantes aprendes a las malas que tendrás que toparte con la programación en algún momento, te surgiran muchísimas dudas en cuanto a que lenguaje debes aprender para entonces comenzar tu inmenso viaje en el fascinante mundo de la programación.
 
