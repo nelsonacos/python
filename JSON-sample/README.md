@@ -6,7 +6,11 @@ Es extremadamente importante dominar la habilidad de trabajar con este formato y
 
 ## Un poco de contexto
 
+<<<<<<< HEAD
 El proceso de codificación de JSON generalmente se llama serialización y el proceso opuesto de decodificacíon se llama deserialización. Naturalmente, la deserialización es el proceso recíproco de decodificación de datos que se ha almacenado o entregado en el estándar JSON. quizas esto no lo entiendas del todo pero es bastante sencillo solo vealo de esta manera: leer y escribir datos en formato JSON. la codificación es para escribir datos en el disco, mientras que la decodificación es para leer datos en la memoria. Lo mas probable es que queramos mover datos de un lado a otro, escribir datos con informacion relevante en un fichero JSON o realizar una consulta a la base de datos y retornar la informacion para que Javascript la procese y genere la vista de nuestra aplicacion, en cualquiera de los casos para conseguirlo con python es bastante sencillo, python acepta JSON de manera nativa y todo lo que debemos hacer es agregar esta pieza de codigo `import json` al inicio de nuestro programa para importar la [bibloteca](https://docs.python.org/3/library/json.html) que contiene los metodos prefenidos en el lenguaje para el trabajo con JSON. Todo lo que usted debe conocer son los metodos **loads()**, **load()**, **dumps()**, **dump()** Sencillo cierto? mas facil imposible, manos a la obra!
+=======
+El proceso de codificación de JSON generalmente se llama serialización y el proceso opuesto de decodificacíon se llama deserialización. Naturalmente, la deserialización es el proceso recíproco de decodificación de datos que se ha almacenado o entregado en el estándar JSON. quizas esto no lo entiendas del todo pero es bastante sencillo solo vealo de esta manera: leer y escribir datos en formato JSON. la codificación es para escribir datos en el disco, mientras que la decodificación es para leer datos en la memoria. Lo mas probable es que queramos mover datos de aqui para alla, escribir datos con informacion relevante en un fichero JSON o realizar una consulta a la base de datos y retornar la informacion para que Javascript la procese y genere la vista de nuestra aplicacion, en cualquiera de los casos para conseguirlo con python es bastante sencillo, python acepta JSON de manera nativa y todo lo que debemos hacer es agregar esta pieza de codigo `import json` al inicio de nuestro programa para importar la [bibloteca](https://docs.python.org/3/library/json.html) que contiene los metodos prefenidos en el lenguaje para el trabajo con JSON. Todo lo que usted debe conocer son los metodos **loads()**, **load()**, **dumps()**, **dumps()** Sencillo cierto? manos a la obra!
+>>>>>>> 54b3199f010d3a91b915444f41cad8ce3e0b8c5f
 
 ## El ejemplo
 
@@ -65,7 +69,11 @@ def keep(data):
 keep(data)
 ```
 
+<<<<<<< HEAD
 Como puedes ver en esta nueva version del script ya podemos visualizar mucho mejor los datos y notaras que llegado a este punto es un poco mas complejo de iterar sobre el diccionario ya que deberiamos conocer el id de la criptomenda para seguir iterando sobre ella, pero no te asustes, python lo tiene cubierto, para desarsernos de esta complejidad vamos hacer uso del metodo .values() para iterar sobre el diccionario pero la salida nos mostrar solo los valores:
+=======
+Como puedes ver en esta nueva version del script ya podemos visualizar mucho mejor los datos y notaras que llegado a este punto es un poco mas complejo de iterar sobre el diccionario ya que deberiamos conocer el id de la criptomenda para seguir iterando sobre ella, pero no te asustes, python lo tiene cubierto, para desarsernos de esta complejidad vamos hacer uso del metodo .values() para iterar sobre el diccionario pero la salida nos mostrar solo los valores a continuacion:
+>>>>>>> 54b3199f010d3a91b915444f41cad8ce3e0b8c5f
 
 ```python
 #!/usr/bin/python3
@@ -145,14 +153,22 @@ json.dump(finallist, outfile)
 
 Hemos cubierto todo el flujo de trabajo habitual pero tambien podemos explorar otras opciones, ya que podemos lograrlo de otras maneras. Puedes hacer uso de list comprenhension y dicts comprenhensions para lograrlo ya que es un concepto bastante poderoso y bastante eficiente en rendimiento.
 
+<<<<<<< HEAD
 Si usted quiere aprender mas sobre las comprensiones de lista y comprensiones de diccionarios puede mirar estos tutoriales:
+=======
+Si usted quiere aprender mas sobre las lista de comprensiones y diccionarios comprensiones puede mirar este tutorial:
+>>>>>>> 54b3199f010d3a91b915444f41cad8ce3e0b8c5f
 
 - [List comprenhensions](#)
 - [Dicts comprenhensions](#)
 
 De esta forma lo hariamos usando estos conceptos:
 
+<<<<<<< HEAD
 ```python
+=======
+````python
+>>>>>>> 54b3199f010d3a91b915444f41cad8ce3e0b8c5f
 import requests
 response = requests.get("https://api.coinmarketcap.com/v2/ticker/")
 data = json.loads(response.text)
@@ -162,14 +178,25 @@ with open('top10.json', 'w') as outfile:
 json.dump(top_10, outfile, indent=4, separators=(',', ': '))
 ```
 
+<<<<<<< HEAD
 ## Resumen
+=======
+# Resumen
+>>>>>>> 54b3199f010d3a91b915444f41cad8ce3e0b8c5f
 
 Hemos cubierto una gran cantidad de detalles de una manera sencilla, tambien le he dejado algunas mensiones durante lo largo del texto por si desea profundizar en algunos temas que normalmente necesitan una mayor dedicasion para entenderlo en todo caso ya estamos listo para trabajar con el estandar JSON en Python.
 
 **Recuerde**
 
+<<<<<<< HEAD
 - En el trabajo con JSON normalmente necesitaras decodificar y transformar a un diccionario o lista de python y viceversa.
+=======
+>>>>>>> 54b3199f010d3a91b915444f41cad8ce3e0b8c5f
 - Si desea Decodificar JSON provenientes de un api o de cualquier otro lugar que no implique un abrir un fichero en el disco basta con usar el metodo loads()
 - Si desea Decodificar JSON proveniente de un fichero en disco basta con usar el metodo load()
 - Si Desea Codificar un JSON para seguir manipulando los datos en memoria use dumps()
 - Si desea Codificar JSON y escribirlo en disco use dump()
+<<<<<<< HEAD
+=======
+````
+>>>>>>> 54b3199f010d3a91b915444f41cad8ce3e0b8c5f
