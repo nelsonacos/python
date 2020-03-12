@@ -8,7 +8,7 @@ pip install pyquery
 
 ```python
 from requests import requests
-from pyquery import pyquery 
+from pyquery import PyQuery as pyquery 
 
 response = requests.get( 'https://www.example.com' )
 html = pyquery( response.text )
