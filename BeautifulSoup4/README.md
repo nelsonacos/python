@@ -17,3 +17,52 @@ response = requests.get(url)
 
 html = BeautifulSoup( response, 'html.parser' )
 ```
+
+```python
+html.prettify()
+```
+
+```python
+html.title
+```
+
+```python
+html.title.name
+```
+
+```python
+html.title.string
+```
+
+```python
+html.title.parent.name
+```
+
+```python
+html.p
+```
+
+```python
+html.p['class']
+```
+
+```python
+html.a
+```
+
+```python
+html.find_all('a')
+```
+
+```python
+html.find(id='link3')
+```
+
+```python
+for link in html.find_all('a'):
+    print(link.get('href'))
+```
+
+```python
+html.get_text()
+```
