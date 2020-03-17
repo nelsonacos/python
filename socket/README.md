@@ -2,7 +2,7 @@
 
 ![socket diagrama](./docs/img/socket_diagram.png)
 
-TCP Socket Flow [fuente de la imagen](https://commons.wikimedia.org/wiki/File:InternetSocketBasicDiagram_zhtw.png])
+TCP Socket Flow [fuente de la imagen](https://commons.wikimedia.org/wiki/File:InternetSocketBasicDiagram_zhtw.png)
 
 Crea un objeto de socket que admite el tipo de administrador de contexto , por lo que puede usarlo en una declaración with . No hay necesidad de llamar **close()** :
 
