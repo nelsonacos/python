@@ -17,7 +17,7 @@ subprocess.call([ 'ls' ,  '-1' ],  shell = True)
 
 _**Nota:** Al establecer el argumento de `shell=True `, el subproceso genera un proceso de shell intermedio y le dice que ejecute el comando. El valor predeterminado es ejecutar el comando directamente. El uso de un shell intermedio significa que las variables, los patrones globales y otras características especiales del shell en la cadena de comandos se procesan antes de ejecutar el comando._
 
-_**check_call ( [command list], shell = True )**_
+_**check_call( [command list], shell = True )**_
 
 _Funciona como **call()**, excepto que se verifica el código de salida, y si indica que ocurrió un error, se genera una excepción **CalledProcessError **._
 
