@@ -273,7 +273,7 @@ _Calcula la **desviación estándar de la poblacion** de manera similar a la **d
 import statistics
 
 x = [8.0, 1, 2.5, 4, 28.0]
-stdev_ = statistics.stdev(x)
+stdev_ = statistics.pstdev(x)
 # output: 9.927738916792686
 ```
 
