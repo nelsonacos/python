@@ -246,7 +246,7 @@ variance_ = statistics.pvariance(x)
 # output: 98.56
 ```
 
-_**pstdev( x, mu=None )**_
+_**stdev( x, mu=None )**_
 
 _Calcula la **desviación estándar de la muestra** es otra medida de la propagación de datos. Está conectado a la **varianza de la muestra**, ya que la **desviación estándar**, **𝑠**, es la raíz cuadrada positiva de la **varianza de la muestra**. La **desviación estándar** a menudo es más conveniente que la **varianza** porque tiene la misma unidad que los puntos de datos._
 
@@ -265,7 +265,7 @@ stdev_ = variance_ ** 0.5
 # output: 11.099549540409285
 ```
 
-_**_**pstdev( x, mu=None )**_
+_**pstdev( x, mu=None )**_
 
 _Calcula la **desviación estándar de la poblacion** de manera similar a la **desviacion de la muestra**_
 
