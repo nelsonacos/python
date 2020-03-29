@@ -208,3 +208,105 @@ mode_ = statistics.multimode(x)
 ```
 
 _**Nota:** maneja valores **nan**  como valores regulares y puede retornar **nan** como el valor modal._
+
+_**variance( x )**_
+
+_Calcula la **varianza de la muestra** cuantifica la propagación de los datos. Muestra numéricamente qué tan lejos están los puntos de datos de la media. Puede expresar la varianza muestral del conjunto de datos **𝑥** con **𝑛** elementos matemáticamente como **𝑠² = Σᵢ (𝑥ᵢ - mean (𝑥)) ² / (𝑛 - 1)**, donde **𝑖 = 1, 2, ..., 𝑛** y **mean (𝑥)** es la **media muestral** de **𝑥**. Si desea comprender más profundamente por qué divide la suma con **𝑛 - 1** en lugar de **𝑛**, puede profundizar en [la corrección de Bessel ](https://en.wikipedia.org/wiki/Bessel%27s_correction)._
+
+```python
+import statistics
+
+x = [8.0, 1, 2.5, 4, 28.0]
+variance_ = statistics.variance(x)
+# output: 123.2
+```
+
+_**Nota:** si el conjunto de datos tiene valores **nan**, retornara **nan**._
+
+_Una implementacion de python puro:_
+
+```python
+n = len(x)
+mean_ = sum(x) / n
+variance_ = sum((item - mean_)**2 for item in x) / (n - 1)
+# output: 123.19999999999999
+```
+
+_**pvariance( x, mu=None )**_
+
+_Calcula la **varianza de la población** de manera similar a la **varianza de la muestra**. Sin embargo, debe usar **𝑛** en el denominador en lugar de **𝑛 - 1: Σᵢ (𝑥ᵢ - mean (𝑥)) ² / 𝑛**. En este caso, **𝑛** es el número de elementos en toda la población._
+
+_¡Tenga en cuenta que siempre debe saber si está trabajando con una muestra o con toda la población cada vez que calcula la varianza!_
+
+```python
+import statistics
+
+x = [8.0, 1, 2.5, 4, 28.0]
+variance_ = statistics.pvariance(x)
+# output: 98.56
+```
+
+_**pstdev( x, mu=None )**_
+
+_Calcula la **desviación estándar de la muestra** es otra medida de la propagación de datos. Está conectado a la **varianza de la muestra**, ya que la **desviación estándar**, **𝑠**, es la raíz cuadrada positiva de la **varianza de la muestra**. La **desviación estándar** a menudo es más conveniente que la **varianza** porque tiene la misma unidad que los puntos de datos._
+
+```python
+import statistics
+
+x = [8.0, 1, 2.5, 4, 28.0]
+stdev_ = statistics.stdev(x)
+# output: 11.099549540409287
+```
+
+_Una forma de implementarla con python puro seria, una vez que obtenga la **varianza**, puede calcular la **desviación estándar**:_
+
+```python
+stdev_ = variance_ ** 0.5
+# output: 11.099549540409285
+```
+
+_**_**pstdev( x, mu=None )**_
+
+_Calcula la **desviación estándar de la poblacion** de manera similar a la **desviacion de la muestra**_
+
+```python
+import statistics
+
+x = [8.0, 1, 2.5, 4, 28.0]
+stdev_ = statistics.stdev(x)
+# output: 9.927738916792686
+```
+
+_**skew()**_
+
+_La **asimetría de la muestra** mide la asimetría de una muestra de datos._
+
+_Hay varias definiciones matemáticas de asimetría. Una expresión común para calcular la asimetría del conjunto de datos **𝑥** con **𝑛** elementos es **(𝑛² / ((𝑛 - 1) (𝑛 - 2))) (Σᵢ (𝑥ᵢ - mean (𝑥)) ³ / (𝑛𝑠³))**. Una expresión más simple es **Σᵢ (𝑥ᵢ - mean (𝑥)) ³ 𝑛 / ((𝑛 - 1) (𝑛 - 2) 𝑠³)**, donde **𝑖 = 1, 2, ..., 𝑛** y **mean (𝑥)** es la media muestral de **𝑥**. La **asimetría** definida de esta manera se denomina coeficiente de momento estandarizado de Fisher-Pearson ajustado.
+
+_esta libreria no nos proporciona esta funcion pero puede implementarlo con python puro:_
+
+```python
+x = [8.0, 1, 2.5, 4, 28.0]
+n = len(x)
+mean_ = sum(x) / n
+variance_ = sum((item - mean_)**2 for item in x) / (n - 1)
+stdev_ = variance_ ** 0.5
+skew_ = (sum((item - mean_)**3 for item in x)
+        * n / ((n - 1) * (n - 2) * std_**3))
+# output: 1.9470432273905929
+```
+
+_**quantiles( x, *, n=4, method='exclusive' )**_
+
+_Divide los datos en **n** intervalos continuos con igual probabilidad. Devuelve una lista de puntos de corte que separan los intervalos. **n - 1**._
+
+```python
+import statistics
+
+x = [-5.0, -1.1, 0.1, 2.0, 8.0, 12.8, 21.0, 25.8, 41.0]
+statistics.quantiles(x, n=2)
+# output: [8.0]
+
+statistics.quantiles(x, n=4, method='inclusive')
+#output: [0.1, 8.0, 21.0]
+```
