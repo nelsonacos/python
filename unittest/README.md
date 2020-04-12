@@ -32,6 +32,22 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
+_**Convenciones**_
+
+```python
+example_app/
+    example_app/
+        __init__.py
+        static/
+        templates/
+        app.py
+    test/
+        __init__.py
+        unit/
+            __init__.py
+            app_test.py
+```
+
 _**Afirmaciones comunes**_
 
 | Método | Equivalente a |
